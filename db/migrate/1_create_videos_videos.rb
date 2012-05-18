@@ -6,7 +6,7 @@ class CreateVideosVideos < ActiveRecord::Migration
       t.datetime :date
       t.text :description
       t.string :video_url
-      t.boolean :hidden
+      t.boolean :hidden, :default => false, :null => false
       t.integer :position
 
       t.timestamps
