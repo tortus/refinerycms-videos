@@ -7,6 +7,8 @@ module Refinery
 
       def index
         @featured_video = Video.featured
+        @videos.reject! {|v| v == @featured_video}
+        
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @video in the line below:
         present(@page)
@@ -14,6 +16,7 @@ module Refinery
 
       def show
         @video = Video.active.find(params[:id])
+        @videos.reject! {|v| v == @video}
 
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @video in the line below:
