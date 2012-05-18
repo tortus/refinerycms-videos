@@ -37,8 +37,11 @@
   </div>
   
   <div class='field'>
-    <%= f.label :video_url -%>
-    <%= f.text_field :video_url  -%>
+    <span class='label_with_help'>
+      <%= f.label :video_url, "Video URL" -%>
+      <%= refinery_help_tag "Simply go to the youtube page for the video, and copy and paste the address bar contents here." %>
+    </span>
+    <%= f.text_field :video_url, :size => 100  -%>
 
   </div>
   
