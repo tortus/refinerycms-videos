@@ -17,7 +17,7 @@ module Refinery
       end
       
       def youtube_id
-        if video_url =~ /\?v=([^&]+)/
+        if video_url =~ /[\?&]v=([^&]+)/
           $1
         else
           video_url
