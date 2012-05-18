@@ -1,0 +1,1 @@
+<iframe class="youtube-player" type="text/html" width="<%= local_assigns[:width] || ::Refinery::Videos.embed_width %>" height="<%= local_assigns[:height] || ::Refinery::Videos.embed_height %>" src="<%= (local_assigns[:video] || @video).embed_url %>" frameborder="0"></iframe>

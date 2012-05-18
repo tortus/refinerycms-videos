@@ -5,6 +5,7 @@ module Refinery
 
   module Videos
     require 'refinery/videos/engine'
+    require 'refinery/videos/configuration'
 
     class << self
       attr_writer :root

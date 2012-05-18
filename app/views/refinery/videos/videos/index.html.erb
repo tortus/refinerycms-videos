@@ -1,11 +1,12 @@
-<% content_for :body_content_left do %>
-  <ul id="videos">
-    <% @videos.each do |video| %>
-      <li>
-        <%= link_to video.title, refinery.videos_video_path(video) %>
-      </li>
-    <% end %>
-  </ul>
+<% if @featured_video.present? %>
+  <h2><%= @featured_video.title %></h2>
+  <%= render "embed.html", :video => @featured_video %>
+  <%= raw @featured_video.description %>
+<% end %>
+
+<% unless @videos.empty? %>
+  <h2>Other Videos</h2>
+  <%= render "videos_grid.html", :videos => @videos.reject {|v| v == @featured_video} %>
 <% end %>
 
 <%= render '/refinery/content_page' %>
