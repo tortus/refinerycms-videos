@@ -1,6 +1,7 @@
 <% if searching? %>
   <h2><%= t('results_for', :scope => 'refinery.admin.search', :query => params[:search]) %></h2>
 <% end %>
+<p><strong>The top-most video is considered "featured".</strong></p>
 <div class='pagination_container'>
   <% if @videos.any? %>
     <%= render 'videos' %>
