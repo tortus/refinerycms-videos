@@ -34,7 +34,7 @@ module Refinery
       def self.by_date; order("date DESC"); end
       
       def self.featured
-        active.by_date.first
+        active.by_position.first
       end
       
       after_create :move_to_top
