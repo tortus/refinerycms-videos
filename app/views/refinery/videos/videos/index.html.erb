@@ -6,7 +6,7 @@
 
 <% unless @videos.empty? %>
   <h2>Other Videos</h2>
-  <%= render "videos_grid.html", :videos => @videos %>
+  <%= render "videos_grid", :videos => @videos %>
 <% end %>
 
 <%= render '/refinery/content_page' %>

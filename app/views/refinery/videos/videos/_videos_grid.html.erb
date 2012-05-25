@@ -1,11 +1,11 @@
-<table>
+<table class="refinery-videos-grid">
   <% (local_assigns[:videos] || @videos).in_groups_of(4).each do |group| -%>
   <tr>
     <% group.each do |video| -%>
     <td>
       <% if video -%>
         <a href="<%= refinery.videos_video_path(video) %>">
-          <%= render "thumbnail.html", :video => video %>
+          <%= render "thumbnail", :video => video %>
         </a>
         <br/>
         <%= link_to video.title, refinery.videos_video_path(video) %>
