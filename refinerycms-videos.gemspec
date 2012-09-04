@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.name              = 'refinerycms-videos'
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Videos extension for Refinery CMS'
+  s.author            = 'Tortus Technologies'
   s.date              = '2012-05-18'
   s.summary           = 'Videos extension for Refinery CMS'
   s.require_paths     = %w(lib)
